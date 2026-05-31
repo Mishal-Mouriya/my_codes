@@ -1,0 +1,68 @@
+//using malloc as well as stack imolementation in array
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int top = -1, size;
+int *stack; // Global pointer
+
+void push(int value) 
+{
+    if (top == size - 1) {
+        printf("Overflow\n");
+    } else {
+        top++;
+        stack[top] = value;
+    }
+}
+
+void pop() 
+{
+    if (top == -1) {
+        printf("Underflow\n");
+    } else {
+        printf("%d deleted\n", stack[top]);
+        top--;
+    }
+}
+
+int isFull()
+ {
+    return (top == size - 1);
+}
+
+
+int main()
+ {
+    int choice, value, i;
+    printf("Enter size of stack: ");
+    scanf("%d", &size);
+
+    // Allocate memory for the global pointer
+    stack = (int *)malloc(size * sizeof(int));
+
+    printf("1-insert\n2-pop\n3-display\n4-check full\n5-exit\n");
+    while (choice != 5) {
+        printf("\n> ");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1:
+                printf("Enter value: ");
+                scanf("%d", &value);
+                push(value);
+                break;
+            case 2:
+                pop();
+                break;
+            case 3:
+                for (i = 0; i <= top; i++) printf("%d ", stack[i]);
+                break;
+            case 4:
+                if (isFull()) printf("Stack is full");
+                else printf("Not full");
+                break;
+        }
+    }
+    free(stack); // Clean up memory
+    return 0;
+}
