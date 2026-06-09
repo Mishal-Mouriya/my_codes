@@ -1,4 +1,6 @@
 #Exercise 2: Develop a class Calculator with methods to add and subtract two numbers.
+#revised very simple
+
 
 class Calculator:
 
