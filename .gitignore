@@ -1,0 +1,10 @@
+# C/C++ Compiled Binaries
+*.exe
+*.o
+*.out
+*.app
+
+# Environment Variables (Never upload these!)
+.env
+.env.local
+

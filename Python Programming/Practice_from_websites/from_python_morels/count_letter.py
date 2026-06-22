@@ -6,8 +6,7 @@ import json
 
 sentence = input("enter  your sentence>")
 senlist=sentence.split(" ")
-wordtuple=tuple(senlist)   #concept 1  #actually no need for tuple as unique keys only exist 
-
+wordtuple=tuple(senlist)   #concept 1  #actually no need for tuple just showing conversion is plausible
  
 #now creating a library for key value combo
 library={}

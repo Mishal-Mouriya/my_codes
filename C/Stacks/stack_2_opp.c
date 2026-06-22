@@ -7,7 +7,7 @@ int *stack; // Global pointer
 
 void push(int value) 
 {
-    if (top == -1) 
+    if (top == 0) 
     {
         printf("Overflow\n");
     } else 
@@ -48,18 +48,26 @@ int main()
     while (choice != 5) {
         printf("\n> ");
         scanf("%d", &choice);
-        switch (choice) {
+        switch (choice) 
+        {
             case 1:
                 printf("Enter value: ");
                 scanf("%d", &value);
                 push(value);
                 break;
+
             case 2:
                 pop();
                 break;
+
             case 3:
-                for (i = top; i >-1 ; i--) printf("%d ", stack[i]);
+                // We print from top (current element) to the end of the array
+                for (i = top; i < size; i++) 
+                { 
+                    printf("%d ", stack[i]);
+                }
                 break;
+
             case 4:
                 if (isFull()) printf("Stack is full");
                 else printf("Not full");

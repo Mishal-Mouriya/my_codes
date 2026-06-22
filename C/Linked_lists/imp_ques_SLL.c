@@ -8,13 +8,17 @@ Data (Integer)
 Pointer to the next node
 
 
-Implement the following operations:Insert a node based on value:
+Implement the following operations:
+Insert a node based on value:
 Ensure the linked list is stored in ascending order after every insertion.
-Find the Middle Element of the linked list.Delete every Nth node
+Find the Middle Element of the linked list.
+Delete every Nth node
 Given N=2, delete 2nd, 4th, 6th nodes etc., from the list.
 Display the Linked List (Call this function after every operation).
 
  Select your choice: 1. Insert 2. Find Middle 3. Delete every Nth node 4. Display 5. Exit
+
+ 
 Enter Choice: 1
 Enter value to insert: 30
 Linked List after insertion: 30

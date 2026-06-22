@@ -6,33 +6,7 @@ struct node {
     struct node *next; // Fixed typo 'stuct'
 };
 
-int top = -1, size;
-int *stack; // Global pointer
 
-void push(int value) 
-{
-    if (top == size - 1) {
-        printf("Overflow\n");
-    } else {
-        top++;
-        stack[top] = value;
-    }
-}
-
-void pop() 
-{
-    if (top == -1) {
-        printf("Underflow\n");
-    } else {
-        printf("%d deleted\n", stack[top]);
-        top--;
-    }
-}
-
-int isFull()
- {
-    return (top == size - 1);
-}
 
 
 int size;

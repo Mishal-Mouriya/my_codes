@@ -2,7 +2,7 @@
 
 class Employee:
 
-    def __init__(self, name, id, b_sal=None):
+    def __init__(self, name, id, b_sal=None): #none makes argument optional very important
 
         self.name = name
         self.id = id
